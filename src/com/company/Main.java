@@ -9,7 +9,8 @@ public class Main {
         System.out.println("1. Заповнити масив тільки парними числами");
         int[] array = new int[10];
         for (int i = 1; i < array.length; i++) {
-            if ((i % 2) == 0) System.out.println(i);
+            if ((i % 2) == 0)
+                System.out.println(i);
         }
         System.out.println("2. Заповнити масив рандомними числами");
 
@@ -42,11 +43,12 @@ public class Main {
 
         System.out.println("5. Вивести значення всіх парних індексів масиву");
 
-        int[] arr1 = {15, 46, 69, 87, 44, 14, 12, 10, 9, 8};
+        int[] arr1 = {5, 65, 88, 44, 12, 10, 8, 6, 3, 7, 77, 99};
         for (int i = 1; i < arr1.length; i++) {
             if ((i % 2) == 0) {
-                System.out.println(i);
+                System.out.println(arr1[i]);
             }
+
         }
         System.out.println("6. Просортувати масив в порядку зростання");
 
@@ -80,7 +82,7 @@ public class Main {
         int c = 0;
         for (int i = 1; i < arry.length; i++) {
             if ((i % 2) == 0) {
-                c = c + i;
+                c += arry[i];
 
             }
         }
@@ -89,8 +91,8 @@ public class Main {
         System.out.println("10. Вивести перших 20 символів з таблиці ASCI");
 
         char[] asci = new char[20];
-        for (char i = 0; i < asci.length; i++) {
-            System.out.print(asci[i]);
+        for (char i = 32; i < 52; i++) {
+            System.out.print(i);
         }
 
     }
