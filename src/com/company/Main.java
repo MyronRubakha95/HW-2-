@@ -7,62 +7,66 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("1. Заповнити масив тільки парними числами");
-        int[] array = new int[10];
+        int[] array = new int[15];
+
         for (int i = 1; i < array.length; i++) {
             if ((i % 2) == 0)
                 System.out.println(i);
         }
+
+
         System.out.println("2. Заповнити масив рандомними числами");
 
         Random random = new Random();
         for (int i = 0; i < array.length; i++) {
-
-            System.out.println(random.nextInt(100));
+            array[i] = random.nextInt(100);
+            System.out.println(array[i]);
         }
+
 
         System.out.println("3.Вивести середнє значення масиву");
 
         int sum = 0;
-        int[] arr = {12, 64, 2, 44, 45, 99};
-        for (int i = 0; i < arr.length; i++) {
-            sum = sum + arr[i];
+
+        for (int i = 0; i < array.length; i++) {
+            sum = sum + array[i];
         }
-        System.out.println((double) sum / arr.length);
+        System.out.println((double) sum / array.length);
 
         System.out.println("4. Вивести суму всіх значень кратних 3");
 
         int a = 0;
         for (int i = 0; i < array.length; i++) {
-            array[i] = i;
-            if ((i % 3) == 0) {
-                a = a + i;
+            if ((array[i] % 3) == 0) {
+                a = a + array[i];
 
             }
         }
         System.out.println(a);
 
+
         System.out.println("5. Вивести значення всіх парних індексів масиву");
 
-        int[] arr1 = {5, 65, 88, 44, 12, 10, 8, 6, 3, 7, 77, 99};
-        for (int i = 1; i < arr1.length; i++) {
+
+        for (int i = 1; i < array.length; i++) {
             if ((i % 2) == 0) {
-                System.out.println(arr1[i]);
+                System.out.println(array[i]);
             }
 
         }
         System.out.println("6. Просортувати масив в порядку зростання");
 
-        int[] arry = {12, 6, 3, 69, 55, 64, 99, 102, 105, 63, 44, 76};
-        for (int i = 0; i < arry.length; i++) {
-            Arrays.sort(arry);
-            System.out.println(arry[i]);
+
+        for (int i = 0; i < array.length; i++) {
+            Arrays.sort(array);
+            System.out.println(array[i]);
         }
 
         System.out.println("7. Вивести найменше значення в масиві");
-        int min = 120;
-        for (int i = 0; i < arry.length; i++) {
-            if (arry[i] <= min) {
-                min = arry[i];
+        int min = 10;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] <= min) {
+                min = array[i];
             }
         }
         System.out.println(min);
@@ -70,9 +74,9 @@ public class Main {
         System.out.println("Вивести найбільше значення масиву");
 
         int max = 0;
-        for (int i = 0; i < arry.length; i++) {
-            if (arry[i] >= max) {
-                max = arry[i];
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] >= max) {
+                max = array[i];
             }
         }
 
@@ -80,9 +84,9 @@ public class Main {
 
         System.out.println("9. Вивести суму значень всіх парних індексів");
         int c = 0;
-        for (int i = 1; i < arry.length; i++) {
+        for (int i = 1; i < array.length; i++) {
             if ((i % 2) == 0) {
-                c += arry[i];
+                c += array[i];
 
             }
         }
@@ -94,6 +98,7 @@ public class Main {
         for (char i = 32; i < 52; i++) {
             System.out.print(i);
         }
+
 
     }
 
